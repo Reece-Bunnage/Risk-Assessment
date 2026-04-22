@@ -13,6 +13,34 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script type="module" src="/main.jsx"></script>
+    <script>
+      (function () {
+        var root = document.getElementById('root');
+
+        if (window.location.protocol === 'file:') {
+          root.innerHTML =
+            '<div style="max-width:760px;margin:48px auto;padding:24px;border:1px solid rgba(255,255,255,0.12);border-radius:12px;font-family:DM Sans,sans-serif;color:#f0f0f8;background:#111118">'
+            + '<h1 style="margin:0 0 12px 0;font-family:Syne,sans-serif">This app needs a dev server</h1>'
+            + '<p style="margin:0 0 10px 0;color:#b0b0c8">You opened this page as a local file. React source files need to be bundled first.</p>'
+            + '<p style="margin:0 0 8px 0;color:#b0b0c8">Run: <code>npm install</code> then <code>npm run dev</code></p>'
+            + '<p style="margin:0;color:#b0b0c8">Then open the local URL shown in the terminal (usually <code>http://localhost:5173</code>).</p>'
+            + '</div>';
+          return;
+        }
+
+        var script = document.createElement('script');
+        script.type = 'module';
+        script.src = '/main.jsx';
+        script.onerror = function () {
+          root.innerHTML =
+            '<div style="max-width:760px;margin:48px auto;padding:24px;border:1px solid rgba(255,255,255,0.12);border-radius:12px;font-family:DM Sans,sans-serif;color:#f0f0f8;background:#111118">'
+            + '<h1 style="margin:0 0 12px 0;font-family:Syne,sans-serif">App failed to load</h1>'
+            + '<p style="margin:0 0 8px 0;color:#b0b0c8">Start the Vite dev server with <code>npm run dev</code> and open its URL.</p>'
+            + '<p style="margin:0;color:#b0b0c8">If npm is missing, install Node.js first.</p>'
+            + '</div>';
+        };
+        document.body.appendChild(script);
+      })();
+    </script>
   </body>
 </html>
