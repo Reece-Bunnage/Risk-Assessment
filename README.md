@@ -14,6 +14,12 @@ This program will utilize AI within a web app to perform a risk assessment of a 
 
 `npm run build`
 
+## GitHub Pages hosting
+
+- This app uses `HashRouter` so routes work on static hosting (GitHub Pages) without server-side rewrites.
+- Vite `base` is set to `./` so built assets resolve correctly under repository subpaths.
+- After deployment, routes will look like `.../#/assess`.
+
 ## Blank page troubleshooting
 
 - Do not open `index.html` directly with a `file:///...` URL.
