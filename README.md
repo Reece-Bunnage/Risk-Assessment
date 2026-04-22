@@ -17,8 +17,10 @@ This program will utilize AI within a web app to perform a risk assessment of a 
 ## GitHub Pages hosting
 
 - This app uses `HashRouter` so routes work on static hosting (GitHub Pages) without server-side rewrites.
-- Vite `base` is set to `./` so built assets resolve correctly under repository subpaths.
+- Vite `base` is set to `/Risk-Assessment/` so built assets resolve correctly on this repository's Pages URL.
 - After deployment, routes will look like `.../#/assess`.
+- Deploys are automatic on every push to `main` via GitHub Actions workflow: `.github/workflows/deploy-pages.yml`.
+- If needed, you can still deploy manually with `npm run deploy`.
 
 ## Blank page troubleshooting
 
