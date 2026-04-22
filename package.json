@@ -17,7 +17,9 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
@@ -35,7 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
+  }
 }
