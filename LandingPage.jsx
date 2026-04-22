@@ -39,7 +39,7 @@ export default function LandingPage() {
           <span className={styles.accent}>before you sign.</span>
         </h1>
         <p className={styles.sub}>
-          VendorGuard helps security and compliance teams evaluate third-party vendor risk
+          bunnage shield helps security and compliance teams evaluate third-party vendor risk
           in minutes — not weeks. Answer 14 questions, get an AI-generated risk report.
         </p>
         <div className={styles.heroActions}>

@@ -11,8 +11,8 @@ export default function Layout() {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <button className={styles.logo} onClick={() => navigate('/')}>
-            <span className={styles.logoMark}>VG</span>
-            <span className={styles.logoText}>VendorGuard</span>
+            <span className={styles.logoMark}>BS</span>
+            <span className={styles.logoText}>bunnage shield</span>
           </button>
           <nav className={styles.nav}>
             <NavLink to="/assess" className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}>
@@ -36,7 +36,7 @@ export default function Layout() {
       </main>
 
       <footer className={styles.footer}>
-        <span>VendorGuard © {new Date().getFullYear()}</span>
+        <span>bunnage shield © {new Date().getFullYear()}</span>
         <span className={styles.footerSep}>·</span>
         <span>AI-powered vendor risk assessment</span>
       </footer>
