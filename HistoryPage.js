@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { loadAssessments, deleteAssessment } from '../utils/storage';
+import { loadAssessments, deleteAssessment } from './storage';
 import styles from './HistoryPage.module.css';
 
 export default function HistoryPage() {

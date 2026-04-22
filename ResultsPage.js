@@ -4,7 +4,7 @@ import {
   RadarChart, Radar, PolarGrid, PolarAngleAxis,
   ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Cell
 } from 'recharts';
-import { CATEGORIES, CATEGORY_COLORS } from '../data/questions';
+import { CATEGORIES, CATEGORY_COLORS } from './questions';
 import styles from './ResultsPage.module.css';
 
 function RiskBadge({ rating, color }) {

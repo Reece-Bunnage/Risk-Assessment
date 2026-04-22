@@ -1,4 +1,4 @@
-import { QUESTIONS, CATEGORIES } from '../data/questions';
+import { QUESTIONS, CATEGORIES } from './questions';
 
 export async function callGemini(apiKey, vendorName, answers, scoreResult) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;

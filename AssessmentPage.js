@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { QUESTIONS, CATEGORIES, scoreAssessment } from '../data/questions';
-import { callGemini } from '../utils/gemini';
-import { saveAssessment } from '../utils/storage';
-import { loadSettings } from '../utils/storage';
+import { QUESTIONS, CATEGORIES, scoreAssessment } from './questions';
+import { callGemini } from './gemini';
+import { saveAssessment } from './storage';
+import { loadSettings } from './storage';
 import styles from './AssessmentPage.module.css';
 
 export default function AssessmentPage() {
