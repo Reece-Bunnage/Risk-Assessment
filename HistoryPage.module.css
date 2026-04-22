@@ -1,0 +1,187 @@
+.page { padding: 3rem 2rem 6rem; }
+.inner { max-width: 760px; margin: 0 auto; }
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -1px;
+}
+
+.newBtn {
+  background: var(--accent);
+  color: #0a0a0f;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+
+.newBtn:hover { opacity: 0.9; }
+
+.empty {
+  text-align: center;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.emptyIcon {
+  font-size: 32px;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.emptyTitle {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.emptyDesc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.primaryBtn {
+  background: var(--accent);
+  color: #0a0a0f;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  padding: 11px 24px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition);
+  animation: fadeIn 0.3s ease both;
+}
+
+.card:hover {
+  border-color: rgba(255,255,255,0.12);
+  background: var(--bg-raised);
+}
+
+.cardLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.scoreCircle {
+  width: 48px;
+  height: 48px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.vendorName {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.vendorMeta {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-top: 2px;
+}
+
+.cardRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.ratingBadge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 100px;
+  border: 1px solid;
+  font-family: var(--font-display);
+}
+
+.answeredBadge {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  background: var(--bg-raised);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.aiBadge {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--border-accent);
+  padding: 3px 8px;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
+}
+
+.deleteBtn:hover {
+  color: var(--risk-critical);
+  background: var(--risk-critical-bg);
+}

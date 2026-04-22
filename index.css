@@ -1,0 +1,108 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-base: #0a0a0f;
+  --bg-surface: #111118;
+  --bg-raised: #18181f;
+  --bg-hover: #1e1e28;
+
+  --accent: #00e5a0;
+  --accent-dim: rgba(0, 229, 160, 0.12);
+  --accent-glow: rgba(0, 229, 160, 0.25);
+
+  --risk-low: #00e5a0;
+  --risk-low-bg: rgba(0, 229, 160, 0.08);
+  --risk-medium: #f5c842;
+  --risk-medium-bg: rgba(245, 200, 66, 0.08);
+  --risk-high: #ff6b35;
+  --risk-high-bg: rgba(255, 107, 53, 0.08);
+  --risk-critical: #ff3b5c;
+  --risk-critical-bg: rgba(255, 59, 92, 0.08);
+
+  --text-primary: #f0f0f8;
+  --text-secondary: #8888aa;
+  --text-muted: #55556a;
+
+  --border: rgba(255, 255, 255, 0.06);
+  --border-accent: rgba(0, 229, 160, 0.3);
+
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --transition: 0.18s ease;
+}
+
+html, body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: var(--bg-raised); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--bg-hover); }
+
+/* Utility classes */
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Glow pulse for accent elements */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--accent-glow); }
+  50% { box-shadow: 0 0 16px 4px var(--accent-glow); }
+}
