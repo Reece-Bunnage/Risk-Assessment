@@ -2,7 +2,6 @@ import { QUESTIONS, CATEGORIES } from '../data/questions';
 
 export async function callGemini(apiKey, vendorName, answers, scoreResult) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-//AIzaSyCZgYtQsgMYkvbNz0DNzwDqP45xuzgAcTU
 
   const qaLines = QUESTIONS.map(q => {
     const a = answers[q.id];
